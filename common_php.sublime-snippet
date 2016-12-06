@@ -1,0 +1,81 @@
+<snippet>
+<content><![CDATA[
+<?php
+/*
+* +-------------------------------+
+* | Author: uiste [ JUST DO IT ]  |
+* +-------------------------------+
+* | Connection: <blog.uiste.com>  |
+* +-------------------------------+
+*/
+namespace ${1:Admin}\Controller;
+use Think\Controller;
+
+class ${2:模型名}Controller extends Controller {
+
+	public function lst(){
+    	\$表名Model = D('模型名');
+    	\$表名Data 	= \$表名Model->select();
+
+    	\$this->assign('表名Data',\$表名Data);
+		\$this->display();
+    }
+
+    public function add(){
+		if(IS_POST){
+			\$表名Model = D('模型名');
+
+			if(\$表名Model->create()){
+				if(\$表名Model->add()){
+					\$this->success('数据添加成功！',U('lst'));exit();
+				}else{
+					\$erro = mysql_error();
+					\$this->error('数据添加失败！' . \$表名Model->getDbError());
+				}
+			}else{
+                \$this->error('数据输入错误：' . \$表名Model->getError());
+            }
+		}
+
+		\$this->display();
+    }
+
+    public function edt(){
+    	\$表名Model = D('模型名');
+
+        if (IS_POST) {
+            if (\$data = \$表名Model->create()) {
+                if (\$表名Model->save()!==false) {
+                    \$this->success('更新成功', U('lst'));exit();
+                }else{
+                    \$this->error('更新失败：' . \$表名Model->getDbError());
+                }
+            }else{
+                \$this->error('数据输入错误：' . \$表名Model->getError());
+            }
+        }
+        \$id = I('get.id');
+        \$表名Info = \$表名Model->find(\$id);
+        \$this->assign('表名Info',\$表名Info);
+		\$this->display();
+    }
+
+    public function del(){
+		\$表名Model = M('模型名');
+        \$id = I('get.id');
+        if (\$表名Model->delete(\$id)) {
+            \$this->success('删除成功');exit();
+        }else{
+        \$this->error('删除失败');
+        }
+    }
+
+}
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>uiste</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.php</scope> -->
+</snippet>

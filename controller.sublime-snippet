@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+namespace ${1:Admin}\Controller;
+use Think\Controller;
+
+class ${2:Index}Controller extends Controller {
+
+	public function ${3:add}(){
+    	
+		${4:}
+    }
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ccc</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

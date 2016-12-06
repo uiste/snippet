@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+\$.ajax({
+
+	url: '${1:data.php}',
+	type: '${2:GET}',
+	dataType: '${3:json}',
+	error:function(data){
+		console.log(data);
+	},
+	success:function(json){
+
+		${4:console.log(json);}
+
+	}
+});
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>aj</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

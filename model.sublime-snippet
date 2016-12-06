@@ -1,0 +1,32 @@
+<snippet>
+	<content><![CDATA[
+<?php
+/*
+** +-------------------------------------------
+** | Author: uiste [ JUST DO IT ]
+** +-------------------------------------------
+** | Connection: <blog.uiste.com>
+** +-------------------------------------------
+*/
+namespace ${1:Admin}\\Model;
+use Think\\Model;
+
+/**
+* ${2:addition}
+*/
+class ${3:ModelName}Model extends Model 
+{
+	${12:
+	//自动验证
+	protected \$_validate = array(
+		array('${9:username}', '${10:require}', '${11:名称不能为空}'),
+	);
+	}
+
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>mod</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.php</scope> -->
+</snippet>

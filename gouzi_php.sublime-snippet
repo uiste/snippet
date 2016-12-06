@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+_before_insert(&\$data, \$option)：在调用add方法时这个方法就自动调用了
+_after_insert(\$data, \$option)：
+_before_update(&\$data, \$option)：在调用save方法时这个方法就自动调用了
+_after_update(\$data, \$option)：
+_before_delete(&\$data, \$option)：在调用delete方法时这个方法就自动调用了
+_after_delete(\$data, \$option)：
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>gouzi</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

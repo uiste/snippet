@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+<script type="text/javascript" src="__PUBLIC__/Js/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Js/ueditor/ueditor.all.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Js/ueditor/lang/zh-cn/zh-cn.js"></script>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ueditor</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

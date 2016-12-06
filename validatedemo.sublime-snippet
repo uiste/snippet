@@ -1,0 +1,68 @@
+<snippet>
+	<content><![CDATA[
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>validate.js使用</title>
+	<style type="text/css">
+		label.error{
+			color: red;
+			border: 1px solid gray;
+			margin-left: 3px;
+			padding: 2px;
+		}
+	</style>
+</head>
+<body>
+	<h1>validate.js的使用</h1>
+	<hr />
+	<form action="" method="POST" enctype="multipart/form-data"  name="myform">
+		<p>
+			username: <input type="text" name="username" id="" />
+		</p>
+		<p>
+			password: <input type="password" name="psd" id="" />
+		</p>
+		<p>
+			comfirm: &nbsp;<input type="password" name="psd2" id="" />
+		</p>
+		<p>
+			<input type="submit" value="submit" />
+		</p>
+	</form>
+</body>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="jquery.validate.min.js"></script>
+<script type="text/javascript" src="validate_zh_cn.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('form[name=myform]').validate({
+			//定义验证的规则
+			rules:{
+				//每个字段的验证规则
+				username:{
+					required:true,
+					rangelength:[5,10]
+				},
+				psd:{
+					required:true,
+					rangelength:[5,10]
+				},
+				psd2:{
+					required:true,
+					rangelength:[5,10],
+					equalTo:"#psd"
+				}
+
+			}
+		});
+	})
+</script>
+</html>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>validatedemo</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

@@ -1,0 +1,35 @@
+<snippet>
+	<content><![CDATA[
+<script type="text/javascript" src="__PUBLIC__/Js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Js/validate_zh_cn.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('form[name=myform]').validate({
+			//定义验证的规则
+			rules:{
+				//每个字段的验证规则
+				username:{
+					required:true,
+					rangelength:[5,10]
+				},
+				password:{
+					required:true,
+					rangelength:[5,10]
+				},
+				repassword:{
+					required:true,
+					rangelength:[5,10],
+					equalTo:"#password"
+				}
+
+			}
+		});
+	})
+</script>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>validate</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
