@@ -23,7 +23,8 @@ Snippets are smart templates that will insert text for you and adapt it to their
 ## 以下个人开发过程常用快捷键
 
 ### ThinkPHP
-`uiste`	控制器
+
+>`uiste`	控制器
 `mod`	模型
 `pf`	public function index(){}
 `ww`	$this->
